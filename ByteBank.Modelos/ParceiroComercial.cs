@@ -14,7 +14,7 @@ namespace ByteBank.Modelos
 
         public bool Autenticar(string senha)
         {
-            return _autenticacaoHelper.CompararSenhas(Senha, senha;
+            return _autenticacaoHelper.CompararSenhas(Senha, senha);
         }
     }
 }

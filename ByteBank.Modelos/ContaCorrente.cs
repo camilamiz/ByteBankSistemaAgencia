@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Modelos
 {
+    //Este comentário abaixo é diferente. Ele mostra um tooltip quando passamos o mouse por cima do nome da classe.
+
+    /// <summary>
+    /// Define uma Conta Corrente do banco ByteBank.
+    /// </summary>
     public class ContaCorrente
     {
         public Cliente Titular { get; set; }
@@ -34,6 +39,11 @@ namespace ByteBank.Modelos
             }
         }
 
+        /// <summary>
+        /// Cria uma instância de Conta Corrente com os argumentos utilizados.
+        /// </summary>
+        /// <param name="agencia">Representa o valor da propriedade <see cref="Agencia"/> e deve possuir um valor maior que 0.</param>
+        /// <param name="numero">Representa o valor da propriedade <see cref="Numero"/> e deve possuir um valor maior que 0.</param>
         public ContaCorrente(int agencia, int numero)
         {
             if (agencia <= 0)
