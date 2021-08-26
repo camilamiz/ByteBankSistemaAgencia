@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace ByteBank.Modelos
 {
     //Este comentário abaixo é diferente. Ele mostra um tooltip quando passamos o mouse por cima do nome da classe.
+    //Mas somente quando estamos no mesmo projeto. Quando recompilamos este projeto e referenciamos no ByteBank.SistemaInterno, ele não aparece
+    //pois é ignorado na geração da dll
 
     /// <summary>
     /// Define uma Conta Corrente do banco ByteBank.
@@ -63,6 +65,12 @@ namespace ByteBank.Modelos
             TaxaOperacao = 30 / TotalContasCriadas;
         }
 
+        /// <summary>
+        /// Realiza o saque e atualiza o valor da propriedade <see cref="Saldo"/>.
+        /// </summary>
+        /// <exception cref="ArgumentException">Exceção lançada quando um valor negativo é utilizado no argumento <paramref name="valor"/>.</exception>
+        /// <exception cref="SaldoInsuficienteException">Exceção lançada quando o valor de <paramref name="valor"/> é maior que o valor da propriedade <see cref="Saldo"/>.</exception>
+        /// <param name="valor">Representa do valor do saque, deve ser maior que 0 e menor que o <see cref="Saldo"/>.</param>
         public void Sacar(double valor)
         {
             if (valor < 0)
