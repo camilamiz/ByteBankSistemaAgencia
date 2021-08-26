@@ -23,6 +23,8 @@ namespace ByteBank.Modelos.Funcionarios
         }
 
         public abstract void AumentarSalario();
-        public abstract double GetBonificacao();
+        internal protected abstract double GetBonificacao();
+        //internal protected - é um modificador de acesso que torna o GetBonificacao visivel no projeto Modelos e para as classes derivadas
+        //inclusive se as classes derivadas estiverem fora do projeto, como é o caso da classe Estagiario
     }
 }
