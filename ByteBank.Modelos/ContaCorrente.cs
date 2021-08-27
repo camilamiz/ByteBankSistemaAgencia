@@ -111,5 +111,11 @@ namespace ByteBank.Modelos
 
             contaDestino.Depositar(valor);
         }
+
+        //na documentação do .net, o método ToString é virtual, logo, pode ser sobrescrito
+        public override string ToString()
+        {
+            return $"Número {Numero}, Agência {Agencia}, Saldo {Saldo}";
+        }
     }
 }
