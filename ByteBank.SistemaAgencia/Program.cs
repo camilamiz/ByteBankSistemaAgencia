@@ -44,6 +44,7 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine(resultado.Value);
 
             object conta = new ContaCorrente(456, 555245);
+            //quando está como object, não conseguimos acessar os membros da ContaCorrente, como conta.Numero.
 
             string contaToString = conta.ToString();
             Console.WriteLine("Resultado " + contaToString);
