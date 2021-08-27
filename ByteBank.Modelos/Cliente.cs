@@ -16,7 +16,7 @@ namespace ByteBank.Modelos
         {
             //convertendo o obj para um Cliente por meio de cast
             //Cliente outroCliente = (Cliente)obj; //dá um erro de conversão
-            Cliente outroCliente = obj as Cliente; //dá um erro de NullReferenceException
+            Cliente outroCliente = obj as Cliente; //dá um erro de NullReferenceException se o cast não é feito com sucesso
 
             if (outroCliente == null)
             {
