@@ -44,11 +44,27 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine(resultado.Value);
 
             object conta = new ContaCorrente(456, 555245);
-            object desenvolvedor = new Desenvolvedor("34455666");
 
             string contaToString = conta.ToString();
             Console.WriteLine("Resultado " + contaToString);
             Console.WriteLine(conta);
+
+            Cliente carlos_1 = new Cliente();
+            carlos_1.Nome = "Carlos";
+            carlos_1.Profissao = "Designer";
+            carlos_1.CPF = "123.456.700-88";
+
+            Cliente carlos_2 = new Cliente();
+            carlos_2.Nome = "Carlos";
+            carlos_2.Profissao = "Designer";
+            carlos_2.CPF = "123.456.700-88";
+
+            //O método Equals para objetos está sobrescrito na classe Cliente para que o resultado abaixo saia como true
+            Console.WriteLine(carlos_1.Equals(carlos_2));
+
+            ContaCorrente conta2 = new ContaCorrente(333, 333456);
+            Console.WriteLine(carlos_1.Equals(conta2));
+
 
             //AULA 5-------------------------------
             //ContaCorrente conta = new ContaCorrente(847, 4897847);
